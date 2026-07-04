@@ -1,1 +1,1 @@
-# geodude-relay
+# geodude-relay - email relay
