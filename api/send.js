@@ -65,6 +65,7 @@ export default async function handler(req, res) {
     // --- Send via Resend ---
     const payload = { from, to, subject, html: html || "" };
     if (cc) payload.cc = cc;
+    if (Array.isArray(body.attachments)) payload.attachments = body.attachments;
 
     const sendResp = await fetch("https://api.resend.com/emails", {
       method: "POST",
